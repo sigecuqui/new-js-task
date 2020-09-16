@@ -1,14 +1,17 @@
-const container = document.querySelector('body');
-const smoking = document.createElement('button');
-container.append(smoking);
-smoking.addEventListener('click', rukyk);
 
 const pack = {
     amount: 20,
     smoke() {
         this.amount--;
+        return this.amount;
     }
 }
+
+const container = document.querySelector('body');
+const smoking = document.createElement('button');
+container.append(smoking);
+smoking.addEventListener('click', rukyk);
+smoking.innerText = pack.amount;
 
 // function letsDavaiSmoke(object) {
 //     while (object.amount > 0) {
@@ -20,8 +23,7 @@ const pack = {
 
 function rukyk() {
     if (pack.amount > 0) {
-        pack.smoke();
-        smoking.innerText = pack.amount;
+        smoking.innerText = pack.smoke();
     }
 }
 rukyk();
