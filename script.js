@@ -5,10 +5,10 @@ const pack = {
     }
 }
 
-function letsDavaiSmoke(key) {
-    while (key.amount > 0) {
-        key.smoke();
-        console.log(key.amount);
+function letsDavaiSmoke(object) {
+    while (object.amount > 0) {
+        object.smoke();
+        console.log(object.amount);
     }
 }
 
