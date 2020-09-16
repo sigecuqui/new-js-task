@@ -1,4 +1,4 @@
-const container = document.querySelector('.container');
+const container = document.querySelector('body');
 const smoking = document.createElement('button');
 container.append(smoking);
 smoking.addEventListener('click', rukyk);
