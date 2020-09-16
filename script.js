@@ -6,12 +6,20 @@ const pack = {
         return this.amount;
     }
 }
+const naujasPack = {...pack};
+console.log(naujasPack)
+
 
 const container = document.querySelector('body');
 const smoking = document.createElement('button');
 container.append(smoking);
-smoking.addEventListener('click', rukyk);
 smoking.innerText = pack.amount;
+smoking.addEventListener('click', () => {
+    if (pack.amount > 0) {
+        smoking.innerText = pack.smoke();
+    }
+})
+
 
 // function letsDavaiSmoke(object) {
 //     while (object.amount > 0) {
@@ -20,10 +28,3 @@ smoking.innerText = pack.amount;
 //     }
 // }
 // letsDavaiSmoke(pack);
-
-function rukyk() {
-    if (pack.amount > 0) {
-        smoking.innerText = pack.smoke();
-    }
-}
-rukyk();
