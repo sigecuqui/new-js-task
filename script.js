@@ -5,9 +5,11 @@ const pack = {
     }
 }
 
-while (pack.amount > 0) {
-    pack.smoke();
-    console.log(pack.amount);
+function letsDavaiSmoke() {
+    while (pack.amount > 0) {
+        pack.smoke();
+        console.log(pack.amount);
+    }
 }
 
-
+letsDavaiSmoke();
