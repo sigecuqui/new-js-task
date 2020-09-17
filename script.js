@@ -1,4 +1,3 @@
-
 const pack = {
     amount: 20,
     smoke() {
@@ -6,9 +5,6 @@ const pack = {
         return this.amount;
     }
 }
-const naujasPack = {...pack};
-console.log(naujasPack)
-
 
 const container = document.querySelector('body');
 const smoking = document.createElement('button');
@@ -20,11 +16,21 @@ smoking.addEventListener('click', () => {
     }
 })
 
+function letsDavaiSmoke(object) {
+    console.log(object.amount);
+    smoking.innerText = object.amount;
+}
 
-// function letsDavaiSmoke(object) {
-//     while (object.amount > 0) {
-//         object.smoke();
-//         console.log(object.amount);
-//     }
-// }
-// letsDavaiSmoke(pack);
+letsDavaiSmoke(pack);
+
+const studentai = ['Bzegosz', 'Boleslov', 'Czeslov',];
+
+studentai.forEach((value, index) => {
+    const naujasPack = {...pack};
+    studentai[index] = {
+        vardas: value,
+        pakelis: naujasPack
+    };
+})
+
+console.log(studentai);
